@@ -9,13 +9,13 @@ $('#search').click(function(){
 
    $.ajax('https://swapi.co/api/people/?search='+name ,
    {    
-       timeout: 10000,
+       timeout: 8000,
        dataType: 'json',
        type: 'GET',
        success : function(data){
            //console.log(data.results)
            var infos = data.results[0]
-           $('#result').html(infos.name+' ' + infos.gender)
+           $('#result').html(infos.name)
            
        },
        error : function (errorMessage) { // error callback 
